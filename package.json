@@ -1,6 +1,12 @@
 {
+  "name": "advent-of-code-2024",
+  "version": "1.0.0",
+  "repository": "git@github.com:borjantona/advent-of-code-2024.git",
+  "author": "borjantona",
+  "license": "MIT",
   "devDependencies": {
-    "@types/node": "^22.10.7"
+    "@types/node": "^22.10.7",
+    "esm": "^3.2.25"
   },
   "dependencies": {
     "typescript": "^5.7.3"
