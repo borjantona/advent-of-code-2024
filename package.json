@@ -4,6 +4,7 @@
   "repository": "git@github.com:borjantona/advent-of-code-2024.git",
   "author": "borjantona",
   "license": "MIT",
+  "type": "module",
   "devDependencies": {
     "@types/node": "^22.10.7",
     "esm": "^3.2.25"

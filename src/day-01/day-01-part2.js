@@ -1,30 +1,29 @@
-const { readFileSync } = require("fs");
+import { getInputLists } from "../utils/utils.js";
 
 var locationsSimilarity = 0;
 var locationsGroupOne = [];
 var locationsGroupTwo = [];
 
-var getInputLists = function () {
-    var file = readFileSync('./input.txt', 'utf8');
-	return file.split('\n');
-};
-
-const fileRows = getInputLists();
+const fileRows = getInputLists('./src/day-01/input.txt');
 
 fileRows.map((row) => {
 	const rowSplit = row.split("   ")
-	locationsGroupOne.push(rowSplit[0])
-	locationsGroupTwo.push(rowSplit[1]);
+	locationsGroupOne.push(+rowSplit[0])
+	locationsGroupTwo.push(+rowSplit[1]);
 })
 
+locationsGroupOne.sort()
+locationsGroupTwo.sort()
 
-for(let i = 0; i < locationsGroupOne.length; i++) {
+
+for(let i = 0; i <  locationsGroupOne.length; i++) {
 	const rowNumber = locationsGroupOne[i];
 	let appearances = 0;
-	for (let j = 0; j < locationsGroupTwo.length; j++) {
-		if (+locationsGroupTwo[j] === +rowNumber) {
-			appearances++;
-		}
+	
+	const firstIndex = locationsGroupTwo.indexOf(rowNumber);
+	if (firstIndex !== -1) {
+		const lastIndex = locationsGroupTwo.lastIndexOf(rowNumber);
+		appearances = (lastIndex - firstIndex + 1);
 	}
 
 	locationsSimilarity += rowNumber * appearances;
