@@ -68,7 +68,7 @@ function analyzeString(string = "") {
 }
 
 function main() {
-  const file = getFile("./src/day-03/input.txt");
+  const file = getFile("./src/inputs-and-docs/day-03/input.txt");
   console.log(cleanCorruptedData(file));
 }
 

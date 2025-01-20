@@ -1,6 +1,6 @@
 import { getInputLists } from "./../utils/utils.js";
 
-const file = getInputLists("./src/day-04/input.txt");
+const file = getInputLists("./src/inputs-and-docs/day-04/input.txt");
 
 /*
 MMMSXXMASM

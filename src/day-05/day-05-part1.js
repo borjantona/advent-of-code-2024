@@ -15,7 +15,7 @@ function findMiddleValue(array) {
 }
 
 function main() {
-  const file = getInputLists("./src/inputs-and-docs/day05/input.txt");
+  const file = getInputLists("./src/inputs-and-docs/day-05/input.txt");
   let sumMiddles = 0;
   pageRules = file.filter((val) => val.includes("|"));
   pagesToProduce = file.filter((val) => val.includes(","));

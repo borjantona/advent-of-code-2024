@@ -39,7 +39,7 @@ function checkPageValid(pagesArray) {
 }
 
 function main() {
-  const file = getInputLists("./src/inputs-and-docs/day05/input.txt");
+  const file = getInputLists("./src/inputs-and-docs/day-05/input.txt");
   let sumMiddles = 0;
   let sumMiddlesInc = 0;
   pageRules = file.filter((val) => val.includes("|"));

@@ -4,7 +4,7 @@ var locationsSimilarity = 0;
 var locationsGroupOne = [];
 var locationsGroupTwo = [];
 
-const fileRows = getInputLists('./src/day-01/input.txt');
+const fileRows = getInputLists('./src/inputs-and-docs/day-01/input.txt');
 
 fileRows.map((row) => {
 	const rowSplit = row.split("   ")

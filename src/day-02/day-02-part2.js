@@ -34,7 +34,7 @@ function isSafe(report, removedOneLevel = false) {
 }
 
 function main() {
-  const fileRows = getInputLists("./src/day-02/input.txt");
+  const fileRows = getInputLists("./src/inputs-and-docs/day-02/input.txt");
 
   let safeReports = 0;
   fileRows.map((report) => {
