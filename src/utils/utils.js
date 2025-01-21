@@ -17,3 +17,9 @@ export const getFileArray = (filepath) => {
 	const file = readFileSync(inputFilepath, 'utf-8').trim().split('\n').map(x => x.trim());
 	return file.map(line => line.split(''))
 }
+
+export const deepCopy = (array) => {
+	return array.map(function (arr) {
+		return arr.slice();
+	  });
+}
