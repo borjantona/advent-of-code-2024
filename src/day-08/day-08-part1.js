@@ -20,7 +20,6 @@ function getAntinodes(frequency, posX, posY, map) {
   for (let y = 0; y < maxY; y++) {
     for (let x = 0; x < maxX; x++) {
       if (map[y][x] === frequency && x !== posX && y !== posY) {
-        console.log(`Freq: ${frequency} Position: ${x} ${y}`);
         const antinodesAux = calcAntinode(
           { x: posX, y: posY },
           { x, y },
