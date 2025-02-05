@@ -20,11 +20,6 @@ function fragmentDisk(disk) {
   const diskLength = newDisk.length;
 
   for (let i = diskLength - 1; i >= 0; i--) {
-    const percent = ((100 * (diskLength - i)) / diskLength).toFixed(2);
-    if (["25.00", "50.00", "75.00", "95.00"].includes(percent)) {
-      console.log(`Fragmenting... ${percent}%`);
-    }
-
     const diskMapVar = newDisk[i];
     if (diskMapVar === ".") continue;
 
@@ -93,4 +88,6 @@ function main() {
   console.log(checksum(diskFragmented));
 }
 
-main();
+console.time("execution time")
+main()
+console.timeEnd("execution time") 
